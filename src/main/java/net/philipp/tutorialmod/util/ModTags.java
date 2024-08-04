@@ -1,0 +1,26 @@
+package net.philipp.tutorialmod.util;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.philipp.tutorialmod.TutorialMod;
+
+public class ModTags {
+    public static class Blocks{
+        public static final TagKey<Block> MAGIC_BLOCKS = tag("magic_blocks");
+
+        private static TagKey<Block> tag(String name){
+            return BlockTags.create(new ResourceLocation(TutorialMod.MOD_ID, name));
+        }
+    }
+    public static class Items {
+        public static final TagKey<Item> MAGIC_ITEMS = tag("magic_items");
+
+        private static TagKey<Item> tag(String name) {
+            return ItemTags.create(new ResourceLocation(TutorialMod.MOD_ID, name));
+        }
+    }
+}
